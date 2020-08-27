@@ -149,7 +149,7 @@
         <!-- About Section End -->
 
         <!--Service Section-->
-        <section class="service section">
+        <section class="service section hidden">
             <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
@@ -183,14 +183,96 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc malesuada eros lorem, nec commodo justo.</p>
                         </div>
                     </div>
-                    <!--Service Item End-->
+                    <!--Service Item End-->      
                 </div>
             </div>
         </section>
         <!--Service Section End-->
+        <!--Portifólio Section-->
+        <section class="portifolio section">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Portifólio</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="portifolio-filter padd15">
+                        <button type="button" class="active" data-filter="all">Tudo</button>
+                        <button type="button" data-filter="javascript">JavaScript</button>
+                        <button type="button" data-filter="bootstrap">Bootstrap</button>
+                        <button type="button" data-filter="wordpress">WordPress</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--Portifólio Item-->
+                    <div class="portifolio-item padd-15" data-category="javascript">
+                        <div class="portifolio-item-inner shadow-dark">
+                            <div class="portifolio-img">
+                                <img src="img/O-que-é-Javascript-e-seus-frameworks-Uma-Introdução.png"/>
+                            </div>
+                            <div class="portifolio-info">
+                                <h4>JavaScript</h4>
+                                <div class="icon">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--Portifólio Item End-->    
+                 <!--Portifólio Item-->
+                 <div class="portifolio-item padd-15" data-category="bootstrap">
+                    <div class="portifolio-item-inner shadow-dark">
+                        <div class="portifolio-img">
+                            <img src="img/bootstrap-social.png"/>
+                        </div>
+                        <div class="portifolio-info">
+                            <h4>Bootstrap</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--Portifólio Item End-->  
+                <!--Portifólio Item-->
+                <div class="portifolio-item padd-15" data-category="wordpress">
+                    <div class="portifolio-item-inner shadow-dark">
+                        <div class="portifolio-img">
+                            <img src="img/wordpress-bg-medblue.png"/>
+                        </div>
+                        <div class="portifolio-info">
+                            <h4>WordPress</h4>
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--Portifólio Item End-->  
+                </div>
+            </div>
+        </section> 
+        <!--Portifólio Section End--> 
     </div>
     <!--Main Content End-->
 </div>
     <!--Main Container End-->
+
+    <!--Lightbox-->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <div class="lightbox-close"></div>
+            <img src="img/O-que-é-Javascript-e-seus-frameworks-Uma-Introdução.png" class="lightbox-img"/>
+            <div class="lightbox-caption">
+                <div class="caption-text">
+                    JavaScript
+                </div>
+                <div class="caption-count">1 de 6</div>
+            </div>
+        </div>
+        <div class="lightbox-controls">
+        </div>
+    </div>
 </body>
 </html>
