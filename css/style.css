@@ -538,16 +538,31 @@
 }
 .lightbox .lightbox-content .lightbox-caption {
     position: absolute;
-    bottom: 15px;
+    bottom: -20px;
     left: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: space-batween;
     justify-content: space-between;
     font-size: 16px;
     color: #fff;
+    font-weight: 400;
+
+}
+.lightbox .lightbox-content .lightbox-close {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: -40px;
+    right: 0px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+.lightbox .lightbox-caption .fa {
+    font-size: 25px;
+    cursor: pointer;
 }
 
 
