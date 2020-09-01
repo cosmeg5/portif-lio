@@ -6,6 +6,8 @@
     border-right: 4px solid #ec1839;
     border-bottom: 4px solid #ec1839;
 }
+.contact .contact-info-item .icon,
+.blog .blog-item-inner .blog-info .blog-tags a,
 .portifolio .portifolio-item .portifolio-info .fa,
 .portifolio .portifolio-filter button.active,
 .service-item .service-item-inner .icon .fa,
@@ -22,7 +24,7 @@
 .aside .nav-toggler span,
 .aside .nav-toggler span::before,
 .aside .nav-toggler span::after,
-.home .intro .social-links a {
+.home .intro .social-link a {
     background-color: #ec1839
 }
 .portifolio .portifolio-filter button.active {
