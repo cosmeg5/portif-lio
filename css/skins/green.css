@@ -1,10 +1,10 @@
 .aside .logo a::before {
-    border-top: 4px solid #ec1839;
-    border-left: 4px solid #ec1839;
+    border-top: 4px solid #72b262;
+    border-left: 4px solid #72b262;
 }
 .aside .logo a::after {
-    border-right: 4px solid #ec1839;
-    border-bottom: 4px solid #ec1839;
+    border-right: 4px solid #72b262;
+    border-bottom: 4px solid #72b262;
 }
 .contact .contact-info-item .icon,
 .blog .blog-item-inner .blog-info .blog-tags a,
@@ -17,7 +17,7 @@ body.dark .portifolio .portifolio-filter button.active,
 body.dark .aside .nav li a:hover,
 body.dark .aside .nav li a.active,
 .aside .nav li a.active{
-    color:#ec1839
+    color:#72b262;
 }
 .service-item .service-item-inner .icon:hover,
 .about .about-content .skills .skill-item .progress .progress-in,
@@ -28,10 +28,10 @@ body.dark .aside .nav li a.active,
 .aside .nav-toggler span::before,
 .aside .nav-toggler span::after,
 .home .intro .social-link a {
-    background-color: #ec1839
+    background-color: #72b262;
 }
 body.dark .home .intro img,
 body.dark .portifolio .portifolio-filter button.active,
 .portifolio .portifolio-filter button.active {
-    border-color:  #ec1839;
+    border-color:  #72b262;
 }

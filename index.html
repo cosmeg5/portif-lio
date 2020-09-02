@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio Cosme Barbosa</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/pink.css">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/skins/blue.css" type="text/css">
 
+    <!-- Live Style -->
+    <link rel="stylesheet"  class="alternate-style" title="pink" href="css/skins/pink.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="blue" href="css/skins/blue.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="green" href="css/skins/green.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="orange" href="css/skins/orange.css" type="text/css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="yellow" href="css/skins/yellow.css" type="text/css" disabled>
+    <link rel="stylesheet" href="css/styleSwitch.css" type="text/css">
+
+    <!--Font Style-->
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dark">
     <!--Main Container-->
 <div class="main-container">
     <!-- Aside -->
@@ -407,9 +416,37 @@
         </div>
     </div>
     <!--Lightbox End-->
+    <!-- Live Style Switcher -->
+    <div class="style-switcher">
+        <div class="toggle-style-switcher">
+            <i class="fa fa-cog fa-spin"></i>
+        </div>
+        <h5>Estilo personalizado</h5>
+        <ul>
+            <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839" onclick="setActiveStyle('pink')"></a></li>
+            <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3" onclick="setActiveStyle('blue')"></a></li>
+            <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f" onclick="setActiveStyle('orange')"></a></li>
+            <li><a href="javascript:void(0);" title="yellow" style="background-color: #eeff00" onclick="setActiveStyle('yellow')"></a></li>
+            <li><a href="javascript:void(0);" title="green" style="background-color: #72b626" onclick="setActiveStyle('green')"></a></li>
+        </ul>
+        <h5>Modo Dark</h5>
+        <label>
+            <input type="radio" class="body-skin" name="body-style" value="light">
+            Light
+        </label>
+        <label>
+            <input type="radio" class="body-skin" name="body-style" value="dark" checked="true">
+            Dark
+        </label>
+    </div>
+
+     <!-- Live Style Switcher -->
 
     <!--Templete js-->
     <script src="js/script.js"></script>
     <!--Templete js End-->
+    <!-- JS do style switch -->
+    <script src="js/styleSwitcher.js"></script>
+    <!-- JS do style switch End -->
 </body>
 </html>
