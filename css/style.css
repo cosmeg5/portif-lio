@@ -32,6 +32,8 @@ input, textarea, select {
     overflow-x: hidden;
     overflow-y: auto;
     opacity: 1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .section.back-section{
     z-index: 1;
@@ -142,6 +144,58 @@ input, textarea, select {
     transform: scale(1.1);
 }
 
+/*Preloader*/
+.preloader {
+    background-color: #222222;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 150;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.preloader.opacity-0{
+    opacity: 0;
+}
+.preloader .loader{
+    height: 40px;
+    width: 40px;
+    border: 4px solid #e3e3e3;
+    border-radius: 50%;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+@keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 /* Aside */
 .aside {
     width: 270px;
@@ -153,6 +207,8 @@ input, textarea, select {
     z-index: 10;
     border-right:1px solid #e8dfec;
     padding: 30px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .aside .nav-toggler {
     height: 40px;
@@ -161,7 +217,7 @@ input, textarea, select {
     cursor: pointer;
     position: fixed;
     left: 300px;
-    top: 30px;
+    top: 20px;
     z-index: 11;
     border-radius: 5px;
     background-color: #fdf9ff;
@@ -172,12 +228,17 @@ input, textarea, select {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .aside .nav-toggler span{
     height: 2px;
     width: 18px;
     display: inline-block;
     position: relative;
+}
+.aside .nav-toggler.open span{
+    background-color: transparent;
 }
 .aside .nav-toggler span::before {
     content: '';
@@ -187,6 +248,11 @@ input, textarea, select {
     top: -6px;
     left: 0;
 }
+.aside .nav-toggler.open span::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0px;
+}
 .aside .nav-toggler span::after {
     content: '';
     height: 2px;
@@ -194,6 +260,11 @@ input, textarea, select {
     position: absolute;
     top: 6px;
     left: 0;
+}
+.aside .nav-toggler.open span::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 0px;
 }
 .aside .logo img {
     width: 150px;
@@ -809,12 +880,18 @@ input, textarea, select {
 body.dark .section {
     background-color: #221f1f;
 }
+body.dark .style-switcher .toggle-style-switcher,
+body.dark .style-switcher.open,
+body.dark .aside .nav-toggler,
 body.dark .container .contact-form .form-item .form-control,
 body.dark .blog .blog-item-inner .blog-info,
 body.dark .service-item .service-item-inner,
 body.dark .aside{
     background-color: #222222;
 }
+body.dark .style-switcher .toggle-style-switcher .fa,
+body.dark .style-switcher.open h5,
+body.dark .style-switcher.open label,
 body.dark .blog .blog-item-inner .blog-info .blog-title,
 body.dark .blog .blog-item-inner .blog-info .blog-description,
 body.dark .blog .blog-item-inner .blog-info .blog-tags,
@@ -851,16 +928,19 @@ body.dark .aside .nav li a {
         left: 30px;
     }
     .aside .nav-toggler.open {
-        left: 300px;
+        left: 270px;
     }
     .aside{
         left: -270px;
     }
-    aside.open{
+    .aside.open{
         left: 0px;
     }
     .section {
         left: 0;
+    }
+    .section.open {
+        left: 270px;
     }
     .about .about-content .personal-info .info-item p span {
         display: block;

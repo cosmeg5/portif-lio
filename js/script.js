@@ -1,3 +1,11 @@
+window.addEventListener("load", function(){
+    document.querySelector(".preloader").classList.add("opacity-0");
+
+    setTimeout(function(){
+        document.querySelector(".preloader").style.display="none";
+    }, 1000)
+})
+
 // Portifólio item filter
 const filterContainer = document.querySelector(".portifolio-filter"),
       filterBtns = filterContainer.children,
@@ -115,8 +123,11 @@ for(let i = 0; i<totalNavList; i++) {
             navList[j].querySelector("a").classList.remove("active")
         }
         this.classList.add("active")
-
         showSection(this);
+
+        if(window.innerHTML < 1200) {
+            asideSectionTogglerBtn();
+        }
     })
 }
 
@@ -138,4 +149,7 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
       function asideSectionTogglerBtn(){
           aside.classList.toggle("open");
           navTogglerBtn.classList.toggle("open");
+          for(let i = 0; i<totalAllSection; i++){
+            allSection[i].classList.toggle("open");
+        }
       }
