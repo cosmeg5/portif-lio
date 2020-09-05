@@ -766,8 +766,7 @@ input, textarea, select {
 }
 .blog .blog-item-inner .blog-img img {
     width: 100%;
-    background-color: #fdf9ff;;
-    display: block;
+    background-color: #fff;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
